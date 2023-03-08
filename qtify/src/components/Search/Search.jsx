@@ -3,7 +3,7 @@ import styles from "./Search.module.css";
 
 const Search = () => {
   return (
-    <>
+    <div className={styles.searchcontainer}>
       <input
         type={Text}
         placeholder="Search a song of your choice"
@@ -12,7 +12,7 @@ const Search = () => {
       <button type="submit" className={styles.searchimg}>
         <img src={require("../../Assets/search_icon.png")} alt="logo" />
       </button>
-    </>
+    </div>
   );
 };
 

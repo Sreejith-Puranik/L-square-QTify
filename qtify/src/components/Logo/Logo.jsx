@@ -1,5 +1,14 @@
 import React from "react";
+import styles from "./Logo.module.css";
 
 export default function Logo() {
-  return <img src={require("../../Assets/logo.png")} alt="logo" />;
+  return (
+    <div>
+      <img
+        src={require("../../Assets/logo.png")}
+        alt="logo"
+        className={styles.logo}
+      />
+    </div>
+  );
 }

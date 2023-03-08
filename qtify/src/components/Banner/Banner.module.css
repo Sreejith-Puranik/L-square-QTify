@@ -1,0 +1,30 @@
+.bannermain {
+  width: 1440px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+}
+
+.bannertext {
+  margin-top: 171px;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.bannerimg {
+  margin-top: 103px;
+  margin-left: 30px;
+  width: 212px;
+  height: 212px;
+}
+
+#content1::after {
+  content: "\a";
+  white-space: pre;
+}
+
+#content2 {
+  margin-left: -50px;
+}
