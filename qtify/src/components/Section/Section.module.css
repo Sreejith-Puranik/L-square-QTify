@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+}
+
+.cardwrapper {
+  margin-top: 18px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cardwrapper1 {
+  margin-top: 18px;
+}
+
+.section {
+  margin: 80px 32px;
+}
+
+.showall {
+  cursor: pointer;
+  color: var(--color-primary);
+}

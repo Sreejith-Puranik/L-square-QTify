@@ -6,11 +6,68 @@ function Topalbums() {
   return (
     <div>
       <p className={styles.albumtitle}>Top Albums</p>
-      <Card
-        albumlogo={require("../../Assets/albumlogo.png")}
-        follows="100 Follows"
-        cardtitle="New Bollywood"
-      />
+      <div className={styles.cardloop}>
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+        <Card
+          albumlogo={require("../../Assets/albumlogo.png")}
+          follows="100 Follows"
+          cardtitle="New Bollywood"
+        />
+      </div>
     </div>
   );
 }
