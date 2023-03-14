@@ -13,16 +13,15 @@ export default function Section(props) {
     });
   }, [props]);
 
+  const handleToggle = () => {
+    setIsShowall((prevstate) => !prevstate);
+  };
   return (
     <div className={styles.section}>
       <div className={styles.wrapper}>
         <div>{props.title}</div>
-        <div
-          id="showallbtn"
-          onClick={() => setIsShowall(!isShowall)}
-          className={styles.showall}
-        >
-          Show all
+        <div id="showallbtn" onClick={handleToggle} className={styles.showall}>
+          {isShowall ? "Collapse" : "Show all"}
         </div>
       </div>
 
@@ -38,7 +37,16 @@ export default function Section(props) {
         </div>
       ) : (
         <div className={styles.cardwrapper1}>
-          <Carausel carddet={cards} />
+          <Carausel
+            data={cards}
+            renderComponent={(data) => (
+              <Card
+                albumlogo={data.image}
+                follows={data.follows}
+                cardtitle={data.title}
+              />
+            )}
+          />
         </div>
       )}
     </div>

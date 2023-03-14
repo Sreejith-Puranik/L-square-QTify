@@ -2,7 +2,7 @@ import { React } from "react";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Section from "./components/Section/Section";
-import { fetchtopsongs } from "./Api/Api";
+import { fetchtopsongs, newalbums } from "./Api/Api";
 
 // import Topalbums from "./components/Topalbums/Topalbums";
 
@@ -19,6 +19,7 @@ function App() {
       <Banner />
       {/* <Topalbums /> */}
       <Section title="Top Albums" datasource={fetchtopsongs} />
+      <Section title="New Albums" datasource={newalbums} />
     </>
   );
 }

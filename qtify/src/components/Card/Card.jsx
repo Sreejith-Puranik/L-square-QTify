@@ -9,6 +9,7 @@ export default function Card(props) {
           src={props.albumlogo}
           alt="albumlogo"
           className={styles.albumlogo}
+          loading="lazy"
         />
 
         <p className={styles.follows}>{props.follows}</p>
