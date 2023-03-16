@@ -19,3 +19,12 @@ export const newalbums = async () => {
     console.log(e);
   }
 };
+
+export const songs = async () => {
+  try {
+    const response = await axios.get(`${Backend_url}/songs`);
+    return response.data;
+  } catch (e) {
+    console.log(e);
+  }
+};
