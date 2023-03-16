@@ -78,7 +78,7 @@ function Songstab(props) {
             renderComponent={(data) => (
               <Card
                 albumlogo={data.image}
-                follows={data.follows}
+                follows={data.likes}
                 cardtitle={data.title}
               />
             )}
