@@ -10,7 +10,11 @@ const Search = () => {
         className={styles.search}
       />
       <button type="submit" className={styles.searchimg}>
-        <img src={require("../../Assets/search_icon.png")} alt="logo" />
+        <img
+          className={styles.icon}
+          src={require("../../Assets/search_icon.png")}
+          alt="logo"
+        />
       </button>
     </div>
   );

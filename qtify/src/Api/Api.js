@@ -28,3 +28,12 @@ export const songs = async () => {
     console.log(e);
   }
 };
+
+export const genre = async () => {
+  try {
+    const response = await axios.get(`${Backend_url}/genres`);
+    return response.data;
+  } catch (e) {
+    console.log(e);
+  }
+};

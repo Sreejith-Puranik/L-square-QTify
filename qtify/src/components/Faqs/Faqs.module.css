@@ -12,3 +12,19 @@
 .faqwrapper {
   padding: 0px 150px 50px 150px;
 }
+
+.content {
+  color: var(--color-white);
+}
+
+.contentwrapper {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  margin-top: 24px;
+}
+
+.contentwrapper1 {
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+}

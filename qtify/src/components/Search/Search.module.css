@@ -10,10 +10,11 @@
 
 .searchimg {
   height: 48px;
+  width: 50px;
   cursor: pointer;
   border: 1px solid var(--color-black);
   border-radius: 8px;
-  color: var(--color-white);
+  background-color: var(--color-white);
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
@@ -21,4 +22,11 @@
 .searchcontainer {
   display: flex;
   align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  margin-left: 8px;
 }

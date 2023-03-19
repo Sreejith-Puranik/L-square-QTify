@@ -24,3 +24,7 @@
   cursor: pointer;
   color: var(--color-primary);
 }
+
+.filters {
+  color: var(--color-white);
+}

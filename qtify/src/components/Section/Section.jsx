@@ -1,18 +1,35 @@
 import { useEffect, useState, React } from "react";
 import Carausel from "../Carausel/Carausel";
 import Card from "../Card/Card";
+import Filters from "../Filters/Filters";
 import styles from "./Section.module.css";
 
 export default function Section(props) {
   const [cards, setCards] = useState([]);
+  const [filters, setFilters] = useState([{ key: "all", label: "All" }]);
+  const [selectedFilterIndex, setSelectedFilterIndex] = useState(0);
   const [isShowall, setIsShowall] = useState(false);
 
   useEffect(() => {
     props.datasource().then((data) => {
       setCards(data);
     });
-  }, [props]);
 
+    if (props.filtersource) {
+      props.filtersource().then((response) => {
+        // console.log(filterdata, "filter");
+        const { data } = response;
+        setFilters([...filters, ...data]);
+      });
+    }
+  }, []);
+
+  const filteredcards = cards.filter((card) =>
+    selectedFilterIndex !== 0
+      ? card.genre.key === filters[selectedFilterIndex].key
+      : card
+  );
+  // console.log(filters);
   const handleToggle = () => {
     setIsShowall((prevstate) => !prevstate);
   };
@@ -24,26 +41,34 @@ export default function Section(props) {
           {isShowall ? "Collapse" : "Show all"}
         </div>
       </div>
-
+      {props.filtersource && (
+        <Filters
+          data={filters}
+          selectedFilterIndex={selectedFilterIndex}
+          setSelectedFilterIndex={setSelectedFilterIndex}
+        />
+      )}
       {isShowall ? (
         <div className={styles.cardwrapper}>
-          {cards.map((card) => (
+          {filteredcards.map((card) => (
             <Card
               albumlogo={card.image}
-              follows={card.follows}
+              follows={props.type === "album" ? card.follows : card.likes}
               cardtitle={card.title}
+              type={props.type}
             />
           ))}
         </div>
       ) : (
         <div className={styles.cardwrapper1}>
           <Carausel
-            data={cards}
+            data={filteredcards}
             renderComponent={(data) => (
               <Card
                 albumlogo={data.image}
-                follows={data.follows}
+                follows={props.type === "album" ? data.follows : data.likes}
                 cardtitle={data.title}
+                type={props.type}
               />
             )}
           />

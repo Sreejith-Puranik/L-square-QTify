@@ -1,0 +1,8 @@
+.tabstyle {
+  margin-top: 15px;
+  margin-bottom: 23px;
+}
+
+.tabcolor {
+  color: var(--color-white) !important;
+}
