@@ -22,6 +22,7 @@ export default function Section(props) {
         setFilters([...filters, ...data]);
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const filteredcards = cards.filter((card) =>
